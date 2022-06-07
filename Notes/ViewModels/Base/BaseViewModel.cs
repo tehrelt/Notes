@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace Notes.ViewModels.Base;
 
-internal class BaseViewModel : INotifyPropertyChanged
+internal class ViewModel : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler? PropertyChanged;
     public void OnPropertyChanged([CallerMemberName] string prop = null)

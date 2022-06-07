@@ -9,7 +9,29 @@
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
-    <Grid>
-        <TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}" Margin="10,10,375,257"/>
-    </Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Создать новый файл"/>
+                <MenuItem Header="Открыть файл"/>
+                <MenuItem Header="Выход"/>
+            </MenuItem>
+            <MenuItem Header="Помощь">
+                <MenuItem Header="О программе"/>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <TextBlock>
+                Кодировка: <TextBlock/>
+            </TextBlock>
+        </StatusBar>
+        <TabControl>
+            <TabItem Header="file.txt">
+                <TextBox TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         VerticalScrollBarVisibility="Visible"
+                         Text="aaa"/>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
 </Window>

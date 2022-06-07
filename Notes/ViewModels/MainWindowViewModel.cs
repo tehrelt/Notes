@@ -1,6 +1,8 @@
-﻿namespace Notes.ViewModels
+﻿using Notes.ViewModels.Base;
+
+namespace Notes.ViewModels
 {
-    internal class MainWindowViewModel : Base.BaseViewModel
+    internal class MainWindowViewModel : ViewModel
     {
         private string _title = "Notes";
         public string Title
